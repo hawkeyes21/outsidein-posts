@@ -10,7 +10,7 @@ import jakarta.inject.Singleton;
 import java.util.List;
 
 @Singleton
-public class UserGateway {
+public class JsonPlaceHolderGateway {
     @Inject
     @Client("https://jsonplaceholder.typicode.com/")
     HttpClient client;
@@ -25,4 +25,6 @@ public class UserGateway {
         List<User> users = client.toBlocking().retrieve(HttpRequest.GET("/users"), Argument.listOf(User.class));
         return users;
     }
+
+
 }

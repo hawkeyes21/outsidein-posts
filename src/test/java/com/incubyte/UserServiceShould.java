@@ -19,12 +19,11 @@ import static org.mockito.Mockito.when;
 @MockitoSettings(strictness = Strictness.LENIENT)
 public class UserServiceShould {
     @Mock
-    UserGateway userGateway;
+    JsonPlaceHolderGateway userGateway;
 
     UserService userService;
 
     @BeforeEach
-
     public void init() {
         Post post1 = new Post();
         post1.setUserId("1");

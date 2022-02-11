@@ -9,9 +9,9 @@ import java.util.stream.Collectors;
 @Singleton
 public class UserService {
     @Inject
-    private UserGateway userGateway;
+    private JsonPlaceHolderGateway userGateway;
 
-    public UserService(UserGateway userGateway) {
+    public UserService(JsonPlaceHolderGateway userGateway) {
         this.userGateway = userGateway;
     }
 

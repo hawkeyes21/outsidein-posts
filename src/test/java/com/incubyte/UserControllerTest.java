@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 
 import jakarta.inject.Inject;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.Map;
 
@@ -37,8 +39,6 @@ class UserControllerTest {
     public void get_posts_by_username() {
         List<Map> posts = client.toBlocking().retrieve(HttpRequest.GET("/users/Samantha/post"), Argument.listOf(Map.class));
         Assertions.assertFalse(posts.isEmpty());
-
-
     }
 
 }
